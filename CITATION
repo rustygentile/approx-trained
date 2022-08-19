@@ -1,0 +1,6 @@
+@software{Gentile-Welper-2022,
+  author = {Russell Gentile and Gerrit Welper},
+  title = {{Approximation Rates of a Trained Neural Network}},
+  note = {\url{https://github.com/rustygentile/approx-trained}},
+  year = {2022}
+}
