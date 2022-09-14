@@ -27,7 +27,7 @@ def main(data_folder, show, exp_name):
     plot_curves(ax[2], data_folder, step_files)
 
     ax[0].set_ylabel(r'$||a(t) - a(0)||_{\infty}$')
-    ax[0].set_title('Gaussian (a = 0.25)')
+    ax[0].set_title('Gaussian')
     ax[1].set_title('Cusp')
     ax[2].set_title('Step')
     [a.set_box_aspect(1) for a in ax]
@@ -37,7 +37,7 @@ def main(data_folder, show, exp_name):
 
     fig.savefig(os.path.join(data_folder, f'{exp_name}_max_weights_m1000.png'), dpi=1000)
 
-    # Plot smooth functions, m = 10, 100, 1000
+    # Plot step function, m = 10, 100, 1000
     fig, ax = fig_ax_1_by_3(False, height=2)
     m10_files = [f'/tests/s{s}-w10-fstep/losses.csv' for s in sds]
     m100_files = [f'/tests/s{s}-w100-fstep/losses.csv' for s in sds]

@@ -28,7 +28,7 @@ def main(data_folder, show, exp_name):
     plot_curves(ax[2], data_folder, step_files)
 
     ax[0].set_ylabel(rf'$||{NN_FUNCTION} - {TARGET_FUNCTION}||_2$')
-    ax[0].set_title('Gaussian (a = 0.25)')
+    ax[0].set_title('Gaussian')
     ax[1].set_title('Cusp')
     ax[2].set_title('Step')
 

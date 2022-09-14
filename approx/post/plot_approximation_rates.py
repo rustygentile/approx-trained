@@ -141,7 +141,7 @@ def main(data_folder, exp_name):
     # Non-smooth function convergence rates
     fig, ax = fig_ax_1_by_3(sharey=False)
     mfile = os.path.join(data_folder, 'results.csv')
-    plot_rate(ax[0], mfile, '2gaussian', 'res_l2', 'Gaussian (a = 0.25)', params=params['g2f2'])
+    plot_rate(ax[0], mfile, '2gaussian', 'res_l2', 'Gaussian', params=params['g2f2'])
     plot_rate(ax[1], mfile, 'cusp', 'res_l2', 'Cusp', params=params['cf2'])
     plot_rate(ax[2], mfile, 'step', 'res_l2', 'Step', params=params['sf2'])
     ax[0].set_ylabel(rf'$||{NN_FUNCTION} - {TARGET_FUNCTION}||_2$')
@@ -162,7 +162,7 @@ def main(data_folder, exp_name):
 
     # Breakpoint convergence in ||.||_2
     fig, ax = fig_ax_1_by_3(sharey=False)
-    plot_rate(ax[0], mfile, '2gaussian', 'br_l2', 'Gaussian (a = 0.25)', params=params['gb2'])
+    plot_rate(ax[0], mfile, '2gaussian', 'br_l2', 'Gaussian', params=params['gb2'])
     plot_rate(ax[1], mfile, 'cusp', 'br_l2', 'Cusp', params=params['cb2'])
     plot_rate(ax[2], mfile, 'step', 'br_l2', 'Step', params=params['sb2'])
     ax[0].set_ylabel(r'$||\theta(t) - \theta(0)||_{2}$')
@@ -172,7 +172,7 @@ def main(data_folder, exp_name):
 
     # Breakpoint convergence in ||.||_\infty
     fig, ax = fig_ax_1_by_3(sharey=False)
-    plot_rate(ax[0], mfile, '2gaussian', 'br_inf', 'Gaussian (a = 0.25)', params=params['gbinf'])
+    plot_rate(ax[0], mfile, '2gaussian', 'br_inf', 'Gaussian', params=params['gbinf'])
     plot_rate(ax[1], mfile, 'cusp', 'br_inf', 'Cusp', params=params['cbinf'])
     plot_rate(ax[2], mfile, 'step', 'br_inf', 'Step', params=params['sbinf'])
     ax[0].set_ylabel(r'$||\theta(t) - \theta(0)||_{\infty}$')
@@ -185,7 +185,7 @@ def main(data_folder, exp_name):
 
     # Outer weight convergence in ||.||_2
     fig, ax = fig_ax_1_by_3(sharey=False)
-    plot_rate(ax[0], mfile, '2gaussian', 'ar_l2', 'Gaussian (a = 0.25)', params=params['ga2'])
+    plot_rate(ax[0], mfile, '2gaussian', 'ar_l2', 'Gaussian', params=params['ga2'])
     plot_rate(ax[1], mfile, 'cusp', 'ar_l2', 'Cusp', params=params['ca2'])
     plot_rate(ax[2], mfile, 'step', 'ar_l2', 'Step', params=params['sa2'])
     ax[0].set_ylabel(r'$||a(t) - a(0)||_{2}$')
@@ -195,7 +195,7 @@ def main(data_folder, exp_name):
 
     # Outer weight convergence in ||.||_\infty
     fig, ax = fig_ax_1_by_3(sharey=False)
-    plot_rate(ax[0], mfile, '2gaussian', 'ar_inf', 'Gaussian (a = 0.25)', params=params['gainf'])
+    plot_rate(ax[0], mfile, '2gaussian', 'ar_inf', 'Gaussian', params=params['gainf'])
     plot_rate(ax[1], mfile, 'cusp', 'ar_inf', 'Cusp', params=params['cainf'])
     plot_rate(ax[2], mfile, 'step', 'ar_inf', 'Step', params=params['sainf'])
     ax[0].set_ylabel(r'$||a(t) - a(0)||_{\infty}$')
