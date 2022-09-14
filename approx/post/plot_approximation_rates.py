@@ -130,11 +130,11 @@ def plot_rate(ax, results_file, func, norm, title, widths=None, params=None):
 def main(data_folder, exp_name):
 
     include_ar = False
-    if 'trained_ar' in exp_name:
+    if 'untrained_ar' in exp_name:
+        params = UNTRAINED_WEIGHT_PARAMS
+    elif 'trained_ar' in exp_name:
         params = TRAINED_AR_PARAMS
         include_ar = True
-    elif 'untrained_weights' in exp_name:
-        params = UNTRAINED_WEIGHT_PARAMS
     else:
         params = {}
 
@@ -205,6 +205,7 @@ def main(data_folder, exp_name):
 
 
 if __name__ == '__main__':
+
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', type=str, required=True, help='Data folder')
     parser.add_argument('-e', type=str, required=True, help='Experiment name')
