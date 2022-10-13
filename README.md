@@ -10,7 +10,7 @@ bounding the error as a function of the number of trainable parameters, $\theta$
 
 $$f_\theta(x) := \frac{1}{\sqrt{m}} \sum_{r=1}^m a_r \sigma(x - \theta_r)$$
 
-For my master's thesis, I [proved](https://stars.library.ucf.edu/etd2020/1203) that a rate of up to $\alpha=\frac{1}{4}$ can be achived with the assumption that the smoothness of the residual, $||f_\theta - g||_{H^1}$, is uniformly bounded. More recently, we've [shown](http://arxiv_link_goes_here) that $\alpha=\frac{1}{24}$ can be achieved with no such assumption. Our theoretical results rely on a neural tangent kernel (NTK) argument, which also seems promising for multiple dimensions and deeper networks.
+For my master's thesis, I [proved](https://stars.library.ucf.edu/etd2020/1203) that a rate of up to $\alpha=\frac{1}{4}$ can be achived with the assumption that the smoothness of the residual, $||f_\theta - g||_{H^1}$, is uniformly bounded. More recently, we've [shown](https://arxiv.org/abs/2209.08399) that $\alpha=\frac{1}{24}$ can be achieved with no such assumption. Our theoretical results rely on a neural tangent kernel (NTK) argument, which also seems promising for multiple dimensions and deeper networks.
 
 ## Experimental Setup
 For target functions of varying smoothness we use, a Gaussian, a cusp and a step:
